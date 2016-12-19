@@ -23,9 +23,9 @@ public slots:
     void on_fb_ready();
 private:
     Ui::Widget *ui;
-    fbConnect * fb;
-    fbLoginWidget * fblogin;
-    Form * form;
+    fbConnect * fb;//smart pointers
+    fbLoginWidget * fblogin;//--
+    Form * form;//--
 };
 
 #endif // WIDGET_H

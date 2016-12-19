@@ -39,6 +39,6 @@ private:
     QWebEngineView * web;
 
     bool new_user = false;
-};
+};//no variant for return
 
 #endif // FBLOGINWIDGET_H

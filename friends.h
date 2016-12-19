@@ -17,6 +17,6 @@ public:
 
 private:
     Ui::friends *ui;
-};
+};//do not usage class?
 
 #endif // FRIENDS_H

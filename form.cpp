@@ -93,7 +93,7 @@ if (!news_array[current_news_index+3].toObject()["message"].toString().isEmpty()
 
 void Form::on_pushButton_2_clicked()
 {
-    if(current_news_index + 4 > news_array.size()-1) return;
+    if(current_news_index + 4 > news_array.size()-1) return;//may be button should be disable?
     current_news_index +=4;
     current_view_index += 1;
     ui->label_6->setText(QString::number(current_view_index));
@@ -106,7 +106,7 @@ void Form::on_pushButton_2_clicked()
 
 void Form::on_pushButton_clicked()
 {
-    if(current_news_index == 0) return;
+    if(current_news_index == 0) return;//--
     current_news_index -= 4;
     current_view_index -=1;
     ui->label_6->setText(QString::number(current_view_index));
@@ -116,12 +116,12 @@ void Form::on_pushButton_clicked()
 void Form::on_listWidget_itemClicked(QListWidgetItem *item)
 {
     //qDebug() << "ok";
-}
+}//?
 
 void Form::on_pushButton_3_clicked()
 {
-    fb->fbPostMessage(ui->le_post->text());
+    fb->fbPostMessage(ui->le_post->text());//need check if emty text
     QJsonObject feed = fb->fbRequest("me/feed", "");
     news_array = feed["data"].toArray();
-    emit has_news();
+    emit has_news();//need to clear line
 }

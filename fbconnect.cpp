@@ -44,7 +44,7 @@ QJsonObject fbConnect::ObjectFromString(const QString &in)
     else
     {
         qDebug() << "Invalid JSON...\n" << in << endl;
-    }
+    }//may be user need to see it?
 
     return obj;
 }
