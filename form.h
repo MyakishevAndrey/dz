@@ -19,7 +19,7 @@ public:
 
 private:
     Ui::Form *ui;
-    fbConnect * fb;
+    fbConnect * fb;//sp
 
     void setPDataToLabels();
     void on_listWidget_itemClicked(QListWidgetItem *item);
